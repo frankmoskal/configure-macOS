@@ -1,0 +1,35 @@
+###############################################################################
+# Tap Repositories                                                            #
+###############################################################################
+
+tap "caskroom/cask"
+tap "homebrew/aliases"
+tap "homebrew/command-not-found"
+tap "homebrew/dupes"
+tap "homebrew/gui"
+
+
+###############################################################################
+# Install Packages                                                            #
+###############################################################################
+
+brew "bash"
+brew "bash-completion"
+brew "ffmpeg"
+brew "jansson"
+brew "libav"
+brew "libconfig"
+brew "libevent"
+brew "lua"
+brew "mas"
+brew "nano"
+brew "npm"
+brew "openssl"
+brew "python"
+brew "python"
+brew "python3"
+brew "readline"
+brew "shellcheck"
+brew "speedtest-cli"
+brew "wget", args: ["with-iri"]
+brew "youtube-dl"

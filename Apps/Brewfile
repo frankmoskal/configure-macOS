@@ -1,0 +1,26 @@
+###############################################################################
+# Install Casks                                                               #
+###############################################################################
+
+cask "brackets"
+cask "blockblock"
+cask "dnscrypt"
+cask "eclipse-java"
+cask "enpass"
+cask "github-desktop"
+cask "java"
+cask "microsoft-office"
+cask "oversight"
+cask "purevpn"
+cask "provisionql"
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-json"
+cask "ransomwhere"
+cask "spotify"
+cask "suspicious-package"
+cask "teamviewer"
+cask "telegram"
+cask "xquartz"
