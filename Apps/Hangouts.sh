@@ -6,20 +6,25 @@
 
 # Sets Variables for Text Styling
 bold=$(tput bold)
-default=$(tput sgr0)
+normal=$(tput sgr0)
 blue=$(tput setaf 4)
+black=$(tput setaf 0)
 
 mkdir "../Downloads"
 cd "../Downloads"
 
+
 ###############################################################################
-# Bartender2 Installation                                                     #
+# Google Hangouts Installation                                                #
 ###############################################################################
 
-echo -e "${bold}${blue}==> ${default}${bold}Installing Bartender2...${default}"
-wget -q "https://www.macbartender.com/Demo/Bartender%202.zip"
-unzip "Bartender 2.zip" -d "Bartender2"  &>/dev/null
-mv "Bartender2/Bartender 2.app" "/Applications"
-sudo rm -r -f -P  "../Downloads"
+nativefier -f --name "Hangouts" https://hangouts.google.com > path.txt
 
+while IFS='' read -r line || [[ -n "$line" ]]; do
+if [[ "$line" == *"App built to"* ]; then
+path=${line#*/"}
+fi
+done < "path.txt"
+echo "$path"
 
+#sudo rm -r -f -P  "../Downloads"

@@ -6,9 +6,8 @@
 
 # Sets Variables for Text Styling
 bold=$(tput bold)
-normal=$(tput sgr0)
+default=$(tput sgr0)
 blue=$(tput setaf 4)
-black=$(tput setaf 0)
 
 mkdir "../Downloads"
 cd "../Downloads"
@@ -18,8 +17,8 @@ cd "../Downloads"
 # cask-upgrade Installation                                                          #
 ###############################################################################
 
-echo -e "${bold}${blue}==> ${black}Installing cask-upgrade ${normal}"
+echo -e "${bold}${blue}==> ${default}${bold}Installing cask-upgrade ${default}"
 git clone git://github.com/frankmoskal/cask-upgrade.git &>/dev/null
-mv "cask-upgrade/cask-upgrade.py" "../Shell/Bash/bin"
+sudo mv -f "cask-upgrade/cask-upgrade.py" "../Shell/Bash/bin"
 sudo rm -r -f -P "../Downloads"
 

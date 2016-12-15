@@ -6,25 +6,23 @@
 
 # Sets Variables for Text Styling
 bold=$(tput bold)
-normal=$(tput sgr0)
+default=$(tput sgr0)
 blue=$(tput setaf 4)
-black=$(tput setaf 0)
 
 # Closes System Preferences
 osascript -e 'tell application "System Preferences" to quit'
 
 # Checks for sudo permissions
 if ! sudo -S true < /dev/null &>/dev/null ; then
-echo -e "${bold}${blue}==> ${black}Input an Administrator's Password: ${normal}"
+echo -e "${bold}${blue}==> ${default}${bold}Input an Administrator's Password: ${default}"
 sudo -v
 fi
 
 # Updates existing sudo time stamp until script finishes
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo -e "${bold}${blue}==> ${black}Input your HostName: ${normal}"
-#read -er -p "Hostname: " host
-host="PoseidoNet"
+echo -e "${bold}${blue}==> ${default}${bold}Input your HostName: ${default}"
+read -er -p "Hostname: " host
 
 ###############################################################################
 # Accessibility Settings                                                      #
@@ -467,11 +465,11 @@ sudo pmset -a hibernatemode 0
 # Set hibernatefile to `/dev/null` so it will not be recreated
 sudo pmset -a hibernatefile /dev/null
 # Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
+sudo rm -f /private/var/vm/sleepimage
 # Create a zero-byte file instead…
 sudo touch /private/var/vm/sleepimage
 # …and make sure it can't be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+sudo bash -c "chflags uchg /private/var/vm/sleepimage"
 
 
 ###############################################################################
@@ -483,6 +481,9 @@ sudo nvram SystemAudioVolume=%80
 
 # Enables verbose boot mode"
 sudo nvram boot-args="-v"
+
+# Sets U.K. locale with U.S. curency
+defaults write ~/Library/Preferences/.GlobalPreferences.plist AppleLocale -string "en_GB@currency=USD"
 
 # Disables Siri
 defaults write com.apple.assistant.support "Assistant Enabled" -bool true

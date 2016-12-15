@@ -6,13 +6,12 @@
 
 # Sets Variables for Text Styling
 bold=$(tput bold)
-normal=$(tput sgr0)
+default=$(tput sgr0)
 blue=$(tput setaf 4)
-black=$(tput setaf 0)
 
 # Checks for sudo permissions
 if ! sudo -S true < /dev/null &>/dev/null ; then
-echo -e "${bold}${blue}==> ${black}Input an Administrator's Password: ${normal}"
+echo -e "${bold}${blue}==> ${default}${bold}Input an Administrator's Password: ${default}"
 sudo -v
 fi
 

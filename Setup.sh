@@ -7,13 +7,6 @@
 # Clears Screen
 clear
 
-# Sets Variables for Text Styling
-bold=$(tput bold)
-normal=$(tput sgr0)
-blue=$(tput setaf 4)
-black=$(tput setaf 0)
-
-
 ###############################################################################
 # Xcode Command Line Tools (CLT)                                              #
 ###############################################################################

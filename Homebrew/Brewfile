@@ -2,7 +2,6 @@
 # Tap Repositories                                                            #
 ###############################################################################
 
-tap "caskroom/cask"
 tap "homebrew/aliases"
 tap "homebrew/command-not-found"
 tap "homebrew/dupes"

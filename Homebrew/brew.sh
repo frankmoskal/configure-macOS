@@ -16,7 +16,7 @@ black=$(tput setaf 0)
 ###############################################################################
 
 # Installs Homebrew
-#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Updates Homebrew
 brew update && brew upgrade
