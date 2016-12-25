@@ -32,7 +32,7 @@ wget -q "https://www.starnet.com/$download"
 sleep 2
 echo -e "${bold}${blue}==> ${default}${bold}Installing FastX...${default}"
 hdiutil mount "$file" &>/dev/null
-if [-f /Applications/FastX.app ]; then
+if [ -f /Applications/FastX.app ]; then
 sudo rm -f /Applications/FastX.app
 fi
 sudo cp -r -f "/Volumes/FastX/FastX.app" "/Applications"

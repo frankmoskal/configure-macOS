@@ -14,6 +14,7 @@ tap "homebrew/gui"
 
 brew "bash"
 brew "bash-completion"
+brew "carthage"
 brew "ffmpeg"
 brew "jansson"
 brew "libav"

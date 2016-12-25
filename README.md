@@ -12,3 +12,4 @@ This is my WIP configuration for my laptop, which is currently running macOS Sie
 * https://github.com/agh/borg
 * https://github.com/StevenBlack/hosts
 * https://github.com/feross/SpoofMAC
+* https://github.com/mstarke/MacPass
