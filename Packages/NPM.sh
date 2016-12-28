@@ -1,3 +1,1 @@
-npm install nativefier
-
-nativefier https://hangouts.google.com
+npm install -g nativefier

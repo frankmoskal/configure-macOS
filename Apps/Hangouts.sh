@@ -21,7 +21,7 @@ cd "../Downloads"
 nativefier -f --name "Hangouts" https://hangouts.google.com > path.txt
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
-if [[ "$line" == *"App built to"* ]; then
+if [ "$line" == *"App built to"* ]; then
 path=${line#*/"}
 fi
 done < "path.txt"
