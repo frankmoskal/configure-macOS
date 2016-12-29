@@ -456,9 +456,6 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 # SSD Settings                                                                #
 ###############################################################################
 
-# Disable hard disk sleep
-sudo pmset -a disksleep 0
-
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
@@ -477,7 +474,7 @@ sudo bash -c "chflags uchg /private/var/vm/sleepimage"
 ###############################################################################
 
 # Disables the sound effects on boot
-sudo nvram SystemAudioVolume=%80
+sudo nvram SystemAudioVolume=""
 
 # Enables verbose boot mode"
 sudo nvram boot-args="-v"
