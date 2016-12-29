@@ -26,7 +26,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo softwareupdate --install --all --background &>/dev/null
 
 # Sets OS-Level Defaults
-source .macOS
+source configure-macOS.sh
 
 ###############################################################################
 # Cleanup                                                                     #

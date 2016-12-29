@@ -17,8 +17,9 @@ cd "../Downloads"
 # cask-upgrade Installation                                                          #
 ###############################################################################
 
-echo -e "${bold}${blue}==> ${default}${bold}Installing cask-upgrade ${default}"
-git clone git://github.com/frankmoskal/cask-upgrade.git &>/dev/null
-sudo mv -f "cask-upgrade/cask-upgrade.py" "${HOME}/bin"
+echo -e "${bold}${blue}==> ${default}${bold}Installing pyceware ${default}"
+git clone git://github.com/frankmoskal/pyceware.git &>/dev/null
+sudo cp -r "pyceware/data" "${HOME}/bin"
+sudo cp -r "pyceware/pyceware.py" "${HOME}/bin"
 sudo rm -r -f -P "../Downloads"
 

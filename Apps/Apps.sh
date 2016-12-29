@@ -29,13 +29,10 @@ brew cask cleanup
 # Resets QuickLook
 qlmanage -r
 
-#mas-cli setup
+#mas-cli setup && install Xcode
 echo -e "${bold}${blue}==> ${default}${bold}Input your Apple ID: ${default}"
 read -er -p "Apple ID: " id
-mas signin "$id"
-
-# Installs Xcode
-mas install 497799835
+mas signin --dialogue "$id" && mas install 497799835
 
 
 ###############################################################################

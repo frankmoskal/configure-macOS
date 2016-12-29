@@ -411,8 +411,8 @@ defaults write com.apple.screencapture "include-date" 0;
 
 # Seeds /dev/random and enables FileVault
 if [[ $(sudo fdesetup status | head -1) == "FileVault is Off." ]]; then
-openssl rand $(($RANDOM * $RANDOM * $RANDOM * $RANDOM)) > /dev/random
-sudo fdesetup enable -user "whoami"
+openssl rand "$(($RANDOM * $RANDOM * $RANDOM * $RANDOM))" > /dev/random
+sudo fdesetup enable -user $(whoami)
 fi
 
 # Enables auto updates
@@ -555,7 +555,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Changes default highlight color to red
 defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.733333 0.721569"
 
-# Makes password required immeditaely after entering sleep mode
+# Makes password required immediately after entering sleep mode
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
