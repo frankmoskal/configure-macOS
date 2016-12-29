@@ -29,7 +29,7 @@ brew "python"
 brew "python"
 brew "python3"
 brew "readline"
-brew "shellcheck"
+brew "gnu-sed", args: ["with-default-names"]
 brew "speedtest-cli"
 brew "wget", args: ["with-iri"]
 brew "youtube-dl"

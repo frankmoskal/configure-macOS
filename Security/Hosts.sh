@@ -27,7 +27,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo -e "${bold}${blue}==> ${default}${bold}Updating Hosts File...${default}"
 sudo rm -f "/private/etc/hosts"
-curl -s https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts -o hosts
+curl -s https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts -o "hosts"
+
+# Cleans up the hosts file
+sed -i -e "/microsoft/d" -e "/#/d" -e "/^$/d" \
+-e 's/fe80::1%lo0 localhost/&\n \n# Custom host records/' "hosts"
+sed -i 1i"# Localhost configuration" "hosts"
+
 sudo mv -f "hosts" "/private/etc/"
 sudo rm -r -f -P "../Downloads"
 
