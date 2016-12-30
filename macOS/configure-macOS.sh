@@ -570,9 +570,6 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Enables "locate" command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist &> /dev/null
 
-# Disables line marks
-defaults write com.apple.Terminal ShowLineMarks -int 0
-
 
 ###############################################################################
 # TextEdit Settings                                                           #

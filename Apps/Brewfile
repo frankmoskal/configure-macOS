@@ -10,6 +10,7 @@ tap "caskroom/versions"
 # Install Casks                                                               #
 ###############################################################################
 
+cask "android-studio"
 cask "brackets"
 cask "blockblock"
 cask "deluge"
