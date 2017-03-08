@@ -12,9 +12,9 @@ tap "homebrew/gui"
 # Install Packages                                                            #
 ###############################################################################
 
+brew "android-platform-tools", args: ["build-from-source"]
 brew "bash", args: ["build-from-source"]
 brew "bash-completion", args: ["build-from-source"]
-brew "carthage", args: ["build-from-source"]
 brew "ffmpeg", args: ["build-from-source"]
 brew "gnu-sed", args: ["with-default-names", "build-from-source"]
 brew "jansson", args: ["build-from-source"]
@@ -22,7 +22,6 @@ brew "libav", args: ["build-from-source"]
 brew "libconfig", args: ["build-from-source"]
 brew "libevent", args: ["build-from-source"]
 brew "lua", args: ["build-from-source"]
-brew "mas", args: ["build-from-source"]
 brew "nano", args: ["build-from-source"]
 brew "npm", args: ["build-from-source"]
 brew "openssl", args: ["build-from-source"]

@@ -1,0 +1,3 @@
+brew "carthage", args: ["build-from-source"]
+
+ONLY AFTER INSTALLING XCODE
