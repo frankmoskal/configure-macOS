@@ -12,24 +12,23 @@ tap "homebrew/gui"
 # Install Packages                                                            #
 ###############################################################################
 
-brew "bash"
-brew "bash-completion"
-brew "carthage"
-brew "ffmpeg"
-brew "jansson"
-brew "libav"
-brew "libconfig"
-brew "libevent"
-brew "lua"
-brew "mas"
-brew "nano"
-brew "npm"
-brew "openssl"
-brew "python"
-brew "python"
-brew "python3"
-brew "readline"
-brew "gnu-sed", args: ["with-default-names"]
-brew "speedtest-cli"
-brew "wget", args: ["with-iri"]
-brew "youtube-dl"
+brew "bash", args: ["build-from-source"]
+brew "bash-completion", args: ["build-from-source"]
+brew "carthage", args: ["build-from-source"]
+brew "ffmpeg", args: ["build-from-source"]
+brew "gnu-sed", args: ["with-default-names", "build-from-source"]
+brew "jansson", args: ["build-from-source"]
+brew "libav", args: ["build-from-source"]
+brew "libconfig", args: ["build-from-source"]
+brew "libevent", args: ["build-from-source"]
+brew "lua", args: ["build-from-source"]
+brew "mas", args: ["build-from-source"]
+brew "nano", args: ["build-from-source"]
+brew "npm", args: ["build-from-source"]
+brew "openssl", args: ["build-from-source"]
+brew "python", args: ["build-from-source"]
+brew "python3", args: ["build-from-source"]
+brew "readline", args: ["build-from-source"]
+brew "speedtest-cli", args: ["build-from-source"]
+brew "wget", args: ["with-iri", "build-from-source"]
+brew "youtube-dl", args: ["build-from-source"]
