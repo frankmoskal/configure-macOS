@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+########################
+# Use Bash Shell
+########################
+sudo bash -c 'echo $(which bash) >> /etc/shells'
+chsh -s $(which bash)

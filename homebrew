@@ -1,0 +1,97 @@
+#########################
+# Homebrew Setup
+#########################
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew analytics off
+brew update
+brew upgrade
+
+##########################
+# Tap Homebrew Repos
+##########################
+brew tap "homebrew/aliases"
+brew tap "homebrew/casks"
+brew tap "homebrew/command-not-found"
+
+
+##########################
+# Install Packages
+##########################
+brew install -s "android-platform-tools"
+brew install -s "bash"
+brew install -s "bash-completion"
+brew install -s "ffmpeg"
+brew install -s "nano"
+brew install -s "openssl"
+brew install -s "python"
+brew install -s "python3"
+brew install -s "wget" --with-iri
+brew install -s "youtube-dl"
+
+##########################
+# Browsers
+##########################
+brew cask install "firefox"
+
+#########################
+# Cloud
+#########################
+brew cask install "bitwarden"
+brew cask install "seafile-client"
+
+#########################
+# Email / Messaging
+#########################
+brew cask install "android-messages"
+brew cask install "postbox"
+brew cask install "telegram"
+brew cask install "tutanota"
+
+#########################
+# Media
+#########################
+brew cask install "iina"
+brew cask install "spotify"
+
+#########################
+# Objective-See
+#########################
+brew cask install "donotdisturb"
+brew cask install "knockknock"
+brew cask install "oversight"
+
+#########################
+# Productivity
+#########################
+brew cask install "bartender"
+brew cask install "github"
+brew cask install "microsoft-office"
+brew cask install "sublime-text"
+brew cask install "the-unarchiver"
+brew cask install "virtualbox"
+
+#########################
+# Quick Look
+#########################
+brew cask install "provisionql"
+brew cask install "qlcolorcode"
+brew cask install "qlimagesize"
+brew cask install "qlmarkdown"
+brew cask install "qlstephen"
+brew cask install "qlvideo"
+brew cask install "quicklook-json"
+brew cask install "quicklook-pat"
+brew cask install "quicklookapk"
+brew cask install "quicklookase"
+brew cask install "suspicious-package"
+brew cask install "webpquicklook"
+
+#########################
+# Rebuild From Source
+#########################
+brew list | xargs brew reinstall --build-from-source
+
+#########################
+# Cleanup
+#########################
+brew cleanup
