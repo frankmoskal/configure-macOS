@@ -1,7 +1,7 @@
 #########################
 # Homebrew Setup
 #########################
-#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew analytics off
 brew update
 brew upgrade
@@ -9,7 +9,7 @@ brew upgrade
 ##########################
 # Tap Homebrew Repos
 ##########################
-brew tap "brew tap buo/cask-upgrade"
+brew tap "buo/cask-upgrade"
 brew tap "homebrew/aliases"
 brew tap "homebrew/cask"
 brew tap "homebrew/command-not-found"
