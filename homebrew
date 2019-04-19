@@ -12,7 +12,9 @@ brew upgrade
 brew tap "buo/cask-upgrade"
 brew tap "homebrew/aliases"
 brew tap "homebrew/cask"
+brew tap "homebrew/cask-fonts"
 brew tap "homebrew/command-not-found"
+brew tap "varenc/ffmpeg"
 
 ##########################
 # Browsers
@@ -96,7 +98,7 @@ brew install "bash"
 brew install "bash-completion"
 brew install "bat"
 brew install "ext4fuse"
-brew install "ffmpeg"
+brew install "varenc/ffmpeg/ffmpeg" $(brew options "varenc/ffmpeg/ffmpeg" --compact)
 brew install "fuse-ntfs-3g"
 brew install "fzf"
 brew install "nano"
