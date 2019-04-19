@@ -1,0 +1,7 @@
+# Set the theme to "Nord"
+--theme="Nord"
+
+# Add mouse scrolling support in less (does not work with older
+# versions of "less")
+--pager="less -FR"
+

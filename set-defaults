@@ -641,6 +641,12 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow IncludeNetworkUse
 sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
 
 
+defaults write com.microsoft.Excel NSRequiresAquaSystemAppearance -bool yes
+defaults write com.microsoft.Powerpoint NSRequiresAquaSystemAppearance -bool yes
+defaults write com.microsoft.Word NSRequiresAquaSystemAppearance -bool yes
+
+
+
 ###############################################################################
 # Cleanup                                                                     #
 ###############################################################################

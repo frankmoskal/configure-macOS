@@ -1,7 +1,7 @@
 #########################
 # Homebrew Setup
 #########################
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew analytics off
 brew update
 brew upgrade
@@ -9,24 +9,10 @@ brew upgrade
 ##########################
 # Tap Homebrew Repos
 ##########################
+brew tap "brew tap buo/cask-upgrade"
 brew tap "homebrew/aliases"
-brew tap "homebrew/casks"
+brew tap "homebrew/cask"
 brew tap "homebrew/command-not-found"
-
-
-##########################
-# Install Packages
-##########################
-brew install -s "android-platform-tools"
-brew install -s "bash"
-brew install -s "bash-completion"
-brew install -s "ffmpeg"
-brew install -s "nano"
-brew install -s "openssl"
-brew install -s "python"
-brew install -s "python3"
-brew install -s "wget" --with-iri
-brew install -s "youtube-dl"
 
 ##########################
 # Browsers
@@ -34,13 +20,13 @@ brew install -s "youtube-dl"
 brew cask install "firefox"
 
 #########################
-# Cloud
+# Cloud Apps
 #########################
 brew cask install "bitwarden"
 brew cask install "seafile-client"
 
 #########################
-# Email / Messaging
+# Email / Messaging Apps
 #########################
 brew cask install "android-messages"
 brew cask install "postbox"
@@ -48,30 +34,42 @@ brew cask install "telegram"
 brew cask install "tutanota"
 
 #########################
-# Media
+# Files Apps
+#########################
+brew cask install "balenaetcher"
+brew cask install "the-unarchiver"
+
+#########################
+# Media Apps
 #########################
 brew cask install "iina"
 brew cask install "spotify"
 
 #########################
-# Objective-See
+# Objective-See Apps
 #########################
-brew cask install "donotdisturb"
+brew cask install "do-not-disturb"
 brew cask install "knockknock"
 brew cask install "oversight"
 
 #########################
-# Productivity
+# Productivity Apps
 #########################
 brew cask install "bartender"
-brew cask install "github"
 brew cask install "microsoft-office"
+
+#########################
+# Programming Apps
+#########################
+brew cask install "android-file-transfer"
+brew cask install "android-platform-tools"
+brew cask install "github"
+brew cask install "osxfuse"
 brew cask install "sublime-text"
-brew cask install "the-unarchiver"
 brew cask install "virtualbox"
 
 #########################
-# Quick Look
+# Quick Look Apps
 #########################
 brew cask install "provisionql"
 brew cask install "qlcolorcode"
@@ -87,11 +85,28 @@ brew cask install "suspicious-package"
 brew cask install "webpquicklook"
 
 #########################
-# Rebuild From Source
-#########################
-brew list | xargs brew reinstall --build-from-source
-
-#########################
 # Cleanup
 #########################
 brew cleanup
+
+##########################
+# Install CLI Tools
+##########################
+brew install "bash"
+brew install "bash-completion"
+brew install "bat"
+brew install "ext4fuse"
+brew install "ffmpeg"
+brew install "fuse-ntfs-3g"
+brew install "fzf"
+brew install "nano"
+brew install "openssl"
+brew install "python"
+brew install "python3"
+brew install "wget"
+brew install "youtube-dl"
+
+##########################
+# Rebuild All Packages
+##########################
+brew list | xargs brew reinstall --build-from-source
