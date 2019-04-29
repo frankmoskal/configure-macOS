@@ -17,6 +17,11 @@ brew tap "homebrew/command-not-found"
 brew tap "varenc/ffmpeg"
 
 ##########################
+# set aliases
+##########################
+rm -rf "$(brew --cache)"
+
+##########################
 # Browsers
 ##########################
 brew cask install "firefox"
